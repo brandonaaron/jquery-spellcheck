@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<title>test</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="jquery.spellcheck.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" charset="utf-8">
+			jQuery(document).ready(function($) {
+				// $.get("test.php", { lang: 'en', text: "testng spelcheckr testng"}, function(r) { console.log(r); });
+				$('#test1').spellcheck({ events: null });
+				$('#test2, #test3').spellcheck();
+				$('#test4').spellcheck({ events: 'keyup' });
+				$('a.checkspelling').bind('click', function(event) {
+					$(this.hash).checkspelling();
+					this.blur();
+					return false;
+				});
+			});
+		</script>
+		<style type="text/css" media="screen">
+			body { font-size: small; font-family:"lucida Grande", "lucida sans unicode", "myriad pro", arial, helvetica, sans-serif; }
+			input, textarea { width: 250px; }
+			textarea { height: 100px; }
+			#spellcheckresults { position: absolute; background: #fff; margin: 0; border: 1px solid #000; padding: 5px; }
+				#spellcheckresults dl { margin: 0; padding: 0; }
+					#spellcheckresults dl dt { float: left; clear: left; margin: 3px 0; padding: 0; font-weight: bold; }
+					#spellcheckresults dl dd { float: left; margin: 3px 10px; padding: 0; cursor: pointer; color: green; }
+					#spellcheckresults dl dd.ignore { color: red; font-style: italic; }
+			
+			a.checkspelling {  }
+				a.checkspelling img { margin: 0 5px; border: 0; }
+		</style>
+	</head>
+	<body>
+		<form action="#" method="get">
+			<fieldset>	
+				<legend>Testing Spellchecker</legend>
+					<label for="test1">Test: </label><input type="text" name="test1" id="test1" value="Testng ths spelcheckr out."><a href="#test1" class="checkspelling"><img src="spellcheck.png"></a><br>
+					<label for="test2">Test: </label><input type="text" name="test2" id="test2"><br>
+					<label for="test3">Test: </label><input type="password" name="test3" id="test3"><br>
+					<label for="test4">Test: </label><br>
+					<textarea name="test4" id="test4"></textarea>
+				</legend>
+			</fieldset>
+		</form>
+	</body>
+</html>
