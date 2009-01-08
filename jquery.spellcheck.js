@@ -10,7 +10,7 @@
  * Creates an instance of a SpellChecker for each matched element.
  * The SpellChecker has several configurable options.
  *  - lang: the 2 letter language code, defaults to en for english
- *  - events: a space seperated string of events to use, default is 'keypress blur paste'
+ *  - events: a space separated string of events to use, default is 'keypress blur paste'
  *  - autocheck: number of milliseconds to check spelling after a key event, default is 750.
  *  - url: url of the spellcheck service on your server, default is spellcheck.php
  *  - ignorecaps: 1 to ignore words with all caps, 0 to check them
