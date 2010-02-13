@@ -11,7 +11,7 @@ It has several configurable options.
 * `ignorecaps`: 1 to ignore words with all caps, 0 to check them
 * `ignoredigits`: 1 to ignore digits, 0 to check them
 
-If there are spelling errors it outputs them to a div with the ID "spellcheckresults" appended to the body and positioned directly under the input. Within this div it creates a definition list (<dl>) with the misspelled word as the title (<dt>) and each suggestion as the definition (<dd>).
+If there are spelling errors it outputs them to a div with the ID "spellcheckresults" appended to the body and positioned directly under the input. Within this div it creates a definition list (&lt;dl&gt;) with the misspelled word as the title (&lt;dt&gt;) and each suggestion as the definition (&lt;dd&gt;).
 
 ## License
 
