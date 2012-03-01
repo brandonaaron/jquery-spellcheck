@@ -8,6 +8,7 @@ It has several configurable options.
 * `events`: a space separated string of events to use, default is 'keypress blur paste'
 * `autocheck`: number of milliseconds to check spelling after a key event, default is 750.
 * `url`: url of the spellcheck service on your server, default is spellcheck.php
+* `checker`: the type of spell checker to use - 'google_toolbar' (default); 'pspell'; 'google_soap_spi' (deprecated)
 * `ignorecaps`: 1 to ignore words with all caps, 0 to check them
 * `ignoredigits`: 1 to ignore digits, 0 to check them
 
