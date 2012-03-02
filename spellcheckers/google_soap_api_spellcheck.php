@@ -17,5 +17,6 @@ $text = str_replace("\n", " ", urldecode($_GET['text']));
 $configs['GoogleSearchAPI']['key'] = "";
 require_once("GoogleSearchService.php");
 $GoogleSearchService = new GoogleSearchService();
+//ToDo.
 $GoogleSearchService->doSpellingSuggestion($configs['GoogleSearchAPI']['key'], $text)
 ?>
