@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title><!-- Insert your title here --></title>
+	<link rel="stylesheet" type="text/css" href="/spellcheck/spellcheck.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="jquery.spellcheck.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+		jQuery(document).ready(function(jQuery) {
+			jQuery('textarea').each(
+				function() {
+					var self = this;
+					var id = self.id;
+					if(jQuery('#' + id).hasClass('spellcheck')) {
+						jQuery('#' + id).spellcheck({ events: 'blur', url: 'spellcheck.php', checker: 'pspell' });
+					}
+				}
+			);
+			jQuery('input[type=text]').each(
+				function() {
+					var self = this;
+					var id = self.id;
+					if(jQuery('#' + id).hasClass('spellcheck')) {
+						jQuery('#' + id).spellcheck({ events: 'blur', url: 'spellcheck.php', checker: 'pspell' });
+					}
+				}
+			);
+			jQuery('#textArea2').spellcheck({ events: 'blur', url: 'spellcheck.php', checker: 'pspell' });
+			jQuery('#textBox2').spellcheck({ events: 'blur', url: 'spellcheck.php', checker: 'pspell' });
+		});
+	</script>
+</head>
+<body>
+    textArea1: <textarea id="textArea1" cols="50" rows="10" class="spellcheck"></textarea><br />
+	textArea2: <textarea id="textArea2" cols="50" rows="10"></textarea><br />
+	textArea3: <textarea id="textArea3" cols="50" rows="10"></textarea><br />
+	textBox1: <input type="text" id="textBox1" class="spellcheck"/><br />
+	textBox2: <input type="text" id="textBox2" /><br />
+	textbox3: <input type="text" id="textBox3" />
+</body>
+</html>
